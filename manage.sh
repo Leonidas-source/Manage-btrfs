@@ -1,4 +1,7 @@
 #!/bin/bash
+frag() {
+clear
+ btrfs filesystem defragment -r folder/
 after() {
   clear
   mount $arg1 folder
@@ -105,14 +108,16 @@ subvolumes() {
   1) create new subvolume
   2) create snapshot
   3) delete subvolume/snapshot
-  4) set default subvolume
-  5) exit"
+  4) defragment
+  5) set default subvolume
+  6) exit"
   read arg3
   [ "$arg3" == "1" ] && new
   [ "$arg3" == "2" ] && snapshot
   [ "$arg3" == "3" ] && delete
-  [ "$arg3" == "4" ] && default
-  [ "$arg3" == "5" ] && menu
+  [ "$arg3" == "4" ] && frag
+  [ "$arg3" == "5" ] && default
+  [ "$arg3" == "6" ] && menu
 }
 menu() {
   clear
