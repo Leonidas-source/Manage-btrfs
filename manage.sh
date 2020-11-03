@@ -65,7 +65,7 @@ delete() {
   btrfs subvolume list folder
   echo "set subvolume to delete
   example: subvolume or subvolume/subvolume"
-  read arg8
+  read -e arg8
   rm -rfv folder/$arg8/*
   btrfs subvolume delete folder/$arg8
   subvolumes
@@ -83,7 +83,7 @@ snapshot() {
   btrfs subvolume list folder
   echo "set subvolume(folder not ID)
   example: folder or folder/folder"
-  read arg6
+  read -e arg6
   btrfs subvolume snapshot folder/$arg6  folder/"$(date +%d'-'%m'-'%Y'-'%H'-'%M'-'%S)"
   subvolumes
 }
