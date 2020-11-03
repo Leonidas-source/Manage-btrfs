@@ -84,7 +84,7 @@ snapshot() {
   echo "set subvolume(folder not ID)
   example: folder or folder/folder"
   read arg6
-  btrfs subvolume snapshot folder/$arg6  folder/"$(date +%d'-'%m'-'%Y)"
+  btrfs subvolume snapshot folder/$arg6  folder/"$(date +%d'-'%m'-'%Y'-'%H'-'%M'-'%S)"
   subvolumes
 }
 mnt() {
