@@ -37,7 +37,7 @@ detailed() {
   btrfs filesystem usage folder
   echo "press enter to escape"
   read arg10
-filesystem
+  filesystem
 }
 usage() {
   clear
