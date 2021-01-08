@@ -88,7 +88,7 @@ snapshot() {
   clear
   btrfs subvolume list folder
   echo "set subvolume(folder not ID)
-  example: folder or folder/folder"
+  example: subvolume_name or subvolume_name/subvolume_name"
   read -e arg6
   echo "set name of snapshot
   1) by date
