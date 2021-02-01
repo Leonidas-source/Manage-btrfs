@@ -157,6 +157,7 @@ option() {
   echo "Set your disk or partition with btrfs"
   read arg1
 }
+set -e
 user_check
 option
 mnt
